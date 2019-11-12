@@ -1,9 +1,14 @@
-<%= simple_form_for @gram, url: new_gram_path do |f| %>
+<div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-3 card form">
 
-    <%= f.input :picture %>
-    <br />
-    <%= f.submit "Submit" %>
+    <h1>New Gram</h1>
+    <%= simple_form_for @gram do |f| %>
+        <%= f.input :message %>
+        <%= f.input :picture %>
+        <br />
+       <%= f.submit "Post!", class: 'my-btn' %>
+    
+    <% end %>
 
-<% end %>
-<h1>New Gram</h1>
+
+</div>
 
